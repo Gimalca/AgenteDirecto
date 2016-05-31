@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Remark - Responsive Bootstrap Admin Template
 
 THANK YOU FOR PURCHASING!
@@ -22,3 +23,8 @@ AgenteDirecto brinda las herramientas para agilizar los procesos de negociación
 >>>>>>> 913ea312f0984fb17a959aa1f05cf1b0ed5b6516
 
 >>>>>>> master
+=======
+# AgenteDirecto Interface Sprint
+
+agentedirecto.com
+>>>>>>> 9843b8940ad0b7c0cab9d7a8953aa09a6d76eb85
