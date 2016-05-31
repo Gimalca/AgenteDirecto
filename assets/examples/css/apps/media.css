@@ -149,6 +149,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #2860a3;
+  font-size: 17px;
 }
 .app-media .media-list.is-list .dropdown {
   display: none;

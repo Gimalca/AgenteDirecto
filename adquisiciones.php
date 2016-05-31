@@ -23,13 +23,15 @@
   
   <link rel="stylesheet" href="global/vendor/ladda-bootstrap/ladda.css">
   <link rel="stylesheet" href="assets/examples/css/uikit/buttons.css">
-  
+
+  <link rel="stylesheet" href="global/vendor/select2/select2.css">
   <link rel="stylesheet" href="global/vendor/waves/waves.css">
   <link rel="stylesheet" href="assets/examples/css/apps/media.css">
   <!-- Fonts -->
   <link rel="stylesheet" href="global/fonts/material-design/material-design.min.css">
   <link rel="stylesheet" href="global/fonts/brand-icons/brand-icons.min.css">
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+  <!--link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'-->
   <!--[if lt IE 9]>
     <script src="global/vendor/html5shiv/html5shiv.min.js"></script>
     <![endif]-->
@@ -56,47 +58,111 @@
 
   <!-- Page -->
   <div class="page animsition">
-    <div class="page-content container-fluid">
+    <div class="page-content container">
       <div class="row" data-plugin="matchHeight" data-by-row="true">
         
         <div class="clearfix"></div>
 
+        <form action="#" class="form-group form-horizontal form-material row">
+
+          <div class="row">
+
+            <div class="panel">
+
+              <div class="panel-body">
+
+                <div class="col-md-3 col-xs-12 text-center" id="step1">
+                  <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName" placeholder="Adquisición o Elemento a buscar" autocomplete="off">
+              </div>
+
+              <div class="col-md-3 col-xs-12 text-center" id="step2">
+                  <input type="text" class="form-control" id="inputBasicFirstName" name="inputFirstName" placeholder="Rubro" autocomplete="off">
+              </div>
+
+              <div class="col-md-3 col-xs-12" id="step3">
+                  <select class="form-control" data-plugin="select2" data-placeholder="Ubicación"
+                          data-allow-clear="true">
+                            <option></option>
+                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                              <option value="AK">Alaska</option>
+                              <option value="HI">Hawaii</option>
+                            </optgroup>
+                            <optgroup label="Pacific Time Zone">
+                              <option value="CA">California</option>
+                              <option value="NV">Nevada</option>
+                              <option value="OR">Oregon</option>
+                            </optgroup>
+                            <optgroup label="Mountain Time Zone">
+                              <option value="AZ">Arizona</option>
+                              <option value="CO">Colorado</option>
+                              <option value="ID">Idaho</option>
+                            </optgroup>
+                            <optgroup label="Central Time Zone">
+                              <option value="AL">Alabama</option>
+                              <option value="AR">Arkansas</option>
+                              <option value="IL">Illinois</option>
+                            </optgroup>
+                            <optgroup label="Eastern Time Zone">
+                              <option value="CT">Connecticut</option>
+                              <option value="DE">Delaware</option>
+                              <option value="FL">Florida</option>
+                            </optgroup>
+                    </select> 
+                </div>
+
+              <div class="col-md-3 col-xs-12 text-center" id="step4">
+                    <button class="btn btn-success waves-effect waves-light" type="button">Buscar Adquisición</button>
+                    
+                    <a href="#" class="site-tour-trigger">
+                      <button class="btn btn-warning waves-effect waves-light" type="button">
+                        <i class="icon md-pin-help" aria-hidden="true"></i>
+                      </button>
+                    </a>  
+              </div>
+
+            </div>
+
+          </div>
+
+          </div>
+
+           
+    </form>
+
+        <div class="clearfix"></div>
+
+
         <div class="page bg-white animsition">
     <!-- Media Sidebar -->
-    <div class="page-aside">
-      <div class="page-aside-switch">
-        <i class="icon md-chevron-left" aria-hidden="true"></i>
-        <i class="icon md-chevron-right" aria-hidden="true"></i>
-      </div>
-      <div class="page-aside-inner" data-plugin="pageAsideScroll">
-        <div data-role="container">
-          <div data-role="content">
-            <section class="page-aside-section">
-              <h5 class="page-aside-title">Buscar</h5>
-              <div class="list-group">
-              
-                <a class="list-group-item active" href="adquisiciones.php"><i class="icon md-favorite" aria-hidden="true"></i>Buscar Adquisiciones</a>
-                <a class="list-group-item" href="licitaciones.php"><i class="icon md-image-o" aria-hidden="true"></i>Buscar Licitaciones</a>
-                <a class="list-group-item" href="empresas.php"><i class="icon md-view-dashboard" aria-hidden="true"></i>Buscar Empresas</a>
+        <div class="page-aside">
+          <div class="page-aside-switch">
+            <i class="icon md-chevron-left" aria-hidden="true"></i>
+            <i class="icon md-chevron-right" aria-hidden="true"></i>
+          </div>
+          <div class="page-aside-inner" data-plugin="pageAsideScroll">
+            <div data-role="container">
+              <div data-role="content">
+                <section class="page-aside-section">
+                  <h5 class="page-aside-title">Buscar</h5>
+                  <div class="list-group">
+                  
+                    <a class="list-group-item active" href="adquisiciones.php"><i class="icon md-favorite" aria-hidden="true"></i>Buscar Adquisiciones</a>
+                    <a class="list-group-item" href="licitaciones.php"><i class="icon md-image-o" aria-hidden="true"></i>Buscar Licitaciones</a>
+                    <a class="list-group-item" href="empresas.php"><i class="icon md-view-dashboard" aria-hidden="true"></i>Buscar Empresas</a>
+                  </div>
+                </section>
+               
               </div>
-            </section>
-           
+            </div>
           </div>
         </div>
-      </div>
-    </div>
     <!-- Media Content -->
     <div class="page-main">
       <!-- Media Content Header -->
       <div class="page-header">
         <h1 class="page-title">Resultados de Búsqueda</h1>
         <div class="page-header-actions">
-          <form>
-            <div class="input-search input-search-dark">
-              <i class="input-search-icon md-search" aria-hidden="true"></i>
-              <input type="text" class="form-control" name="" placeholder="Buscar...">
-            </div>
-          </form>
+         
         </div>
       </div>
       <!-- Media Content -->
@@ -105,7 +171,7 @@
         <div class="page-content-actions">
           
           <div class="pull-right filter">
-              <span>Buscar :</span>
+              <span>Filtrar por</span>
               <div class="dropdown">
                 <button type="button" class="btn btn-pure dropdown-toggle" data-toggle="dropdown"
                 aria-expanded="false">
@@ -132,44 +198,46 @@
               <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
                 
                 <div class="image-wrap">
-				
+        
                   <img class="image img-rounded" src="global/photos/placeholder.png"
                   alt="...">
-				  
-				</div>
-				
+          
+        </div>
+        
                 <div class="info-wrap">
-			     
-						<div class="title"><b>Nombre o Titulo</b> </div>
+           
+            			<div class="title">
+            				<b>Nombre o Titulo</b> 
+            			</div>
                         <div class="time">Descripción Breve de la Licitación </div>
-                        <div class="time"><b>Empresa Solicitante</b></div>
-                        <div class="text-info"> Caracas, Venezuela</div>
-					
-						<div class="time">
-							<i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> -
-							Tiempo Restante
-						</div>
-						
-						<div class="btn-group" style="margin-top: 15px;">
-								<div class="btn-group" role="group">
-									<button type="button" class="btn btn-icon btn-pure" data-toggle="button">
-									  <i class="icon md-favorite-outline text" aria-hidden="true"></i>
-									  <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
-									</button>
-									<button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
-										data-container="body" data-placement="top" 
-										type="button">
-									  <i class="icon md-tag" aria-hidden="true"></i>
-									</button>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                        
+          
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> -
+              10 hrs - 20 mins
+            </div>
+            
+            <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
 
-								</div>
-						</div>
-						
+                </div>
+            </div>
+            
                 </div>
               </div>
             </li>
-			
-			<li>
+      
+      <li>
               <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
                 
                 <div class="image-wrap">
@@ -180,33 +248,344 @@
                   
                         <div class="title"><b>Nombre o Titulo</b> </div>
                         <div class="time">Descripción Breve de la Licitación </div>
-                        <div class="time"><b>Empresa Solicitante</b></div>
-                       
-                        <div class="text-info"> Caracas, Venezuela</div>
-						<div class="time">
-							<i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
-							Tiempo Restante
-						</div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                         
+			            <div class="time">
+			              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+			              10 hrs - 20 mins
+			            </div>
 
-						  <div class="btn-group" style="margin-top: 15px;">
-								<div class="btn-group" role="group">
-									<button type="button" class="btn btn-icon btn-pure" data-toggle="button">
-									  <i class="icon md-favorite-outline text" aria-hidden="true"></i>
-									  <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
-									</button>
-									<button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
-										data-container="body" data-placement="top" 
-										type="button">
-										<i class="icon md-tag" aria-hidden="true"></i>
-									</button>
-								</div>
-						</div>
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
                 </div>
               </div>
-            </li>
-			
+        </li>
+
+        <li>
+              <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
+                
+                <div class="image-wrap">
+                  <img class="image img-rounded" src="global/photos/placeholder.png"
+                  alt="...">
+                </div>
+                <div class="info-wrap">
+                  
+                        <div class="title"><b>Nombre o Titulo</b> </div>
+                        <div class="time">Descripción Breve de la Licitación </div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                       
+                        
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+              10 hrs - 20 mins
+            </div>
+
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
+                </div>
+              </div>
+        </li>
+
+        <li>
+              <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
+                
+                <div class="image-wrap">
+                  <img class="image img-rounded" src="global/photos/placeholder.png"
+                  alt="...">
+                </div>
+                <div class="info-wrap">
+                  
+                        <div class="title"><b>Nombre o Titulo</b> </div>
+                        <div class="time">Descripción Breve de la Licitación </div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                       
+                        
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+              10 hrs - 20 mins
+            </div>
+
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
+                </div>
+              </div>
+        </li>
+
+        <li>
+              <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
+                
+                <div class="image-wrap">
+                  <img class="image img-rounded" src="global/photos/placeholder.png"
+                  alt="...">
+                </div>
+                <div class="info-wrap">
+                  
+                        <div class="title"><b>Nombre o Titulo</b> </div>
+                        <div class="time">Descripción Breve de la Licitación </div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                       
+                        
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+              10 hrs - 20 mins
+            </div>
+
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
+                </div>
+              </div>
+        </li>
+
+        <li>
+              <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
+                
+                <div class="image-wrap">
+                  <img class="image img-rounded" src="global/photos/placeholder.png"
+                  alt="...">
+                </div>
+                <div class="info-wrap">
+                  
+                        <div class="title"><b>Nombre o Titulo</b> </div>
+                        <div class="time">Descripción Breve de la Licitación </div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                       
+                        
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+              10 hrs - 20 mins
+            </div>
+
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
+                </div>
+              </div>
+        </li>
+
+        <li>
+              <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
+                
+                <div class="image-wrap">
+                  <img class="image img-rounded" src="global/photos/placeholder.png"
+                  alt="...">
+                </div>
+                <div class="info-wrap">
+                  
+                        <div class="title"><b>Nombre o Titulo</b> </div>
+                        <div class="time">Descripción Breve de la Licitación </div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                       
+                        
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+              10 hrs - 20 mins
+            </div>
+
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
+                </div>
+              </div>
+        </li>
+
+        <li>
+              <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
+                
+                <div class="image-wrap">
+                  <img class="image img-rounded" src="global/photos/placeholder.png"
+                  alt="...">
+                </div>
+                <div class="info-wrap">
+                  
+                        <div class="title"><b>Nombre o Titulo</b> </div>
+                        <div class="time">Descripción Breve de la Licitación </div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                       
+                        
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+              10 hrs - 20 mins
+            </div>
+
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
+                </div>
+              </div>
+        </li>
+
+        <li>
+              <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
+                
+                <div class="image-wrap">
+                  <img class="image img-rounded" src="global/photos/placeholder.png"
+                  alt="...">
+                </div>
+                <div class="info-wrap">
+                  
+                        <div class="title"><b>Nombre o Titulo</b> </div>
+                        <div class="time">Descripción Breve de la Licitación </div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                       
+                        
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+              10 hrs - 20 mins
+            </div>
+
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
+                </div>
+              </div>
+        </li>
+
+        <li>
+              <div class="media-item" data-toggle="slidePanel" data-url="panel-adquisiciones.tpl">
+                
+                <div class="image-wrap">
+                  <img class="image img-rounded" src="global/photos/placeholder.png"
+                  alt="...">
+                </div>
+                <div class="info-wrap">
+                  
+                        <div class="title"><b>Nombre o Titulo</b> </div>
+                        <div class="time">Descripción Breve de la Licitación </div>
+                        <div class="time"><b>Empresa Solicitante</b> - Caracas, Venezuela</div>
+                       
+                        
+            <div class="time">
+              <i class="icon md-time text-success" style="font-size: 16px" aria-hidden="true"></i> - 
+              10 hrs - 20 mins
+            </div>
+
+              <div class="btn-group" style="margin-top: 0px;">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-icon btn-pure" data-toggle="button">
+                    <i class="icon md-favorite-outline text" aria-hidden="true"></i>
+                    <i class="icon md-favorite text-active text-danger" aria-hidden="true"></i>
+                  </button>
+                  <button class="btn btn-icon btn-pure btn-default" data-original-title="Aplicar en Empresa" data-toggle="tooltip"
+                    data-container="body" data-placement="top" 
+                    type="button">
+                    <i class="icon md-tag" aria-hidden="true"></i>
+                  </button>
+                </div>
+            </div>
+                </div>
+              </div>
+        </li>
+      
             
           </ul>
+
+
+          <div class="example text-right">
+                  <nav>
+                    <ul class="pagination pagination-no-border">
+                      <li class="disabled">
+                        <a href="javascript:void(0)" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="active"><a href="javascript:void(0)">1 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="javascript:void(0)">2</a></li>
+                      <li><a href="javascript:void(0)">3</a></li>
+                      <li><a href="javascript:void(0)">4</a></li>
+                      <li><a href="javascript:void(0)">5</a></li>
+                      <li>
+                        <a href="javascript:void(0)" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
         </div>
       </div>
     </div>
@@ -468,7 +847,10 @@
   <script src="global/vendor/ladda-bootstrap/ladda.js"></script>
   <script src="global/js/components/buttons.js"></script>
   <script src="global/js/components/ladda-bootstrap.js"></script>
-  
+
+  <script src="global/vendor/select2/select2.full.min.js"></script>
+  <script src="global/js/components/select2.js"></script>
+
   <script src="assets/examples/js/dashboard/v1.js"></script>
   <script src="assets/js/app.js"></script>
 </body>

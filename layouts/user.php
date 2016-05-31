@@ -10,7 +10,7 @@
         <i class="icon md-more" aria-hidden="true"></i>
       </button>
       <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
-        <a href="index.php"><img class="navbar-brand-logo" src="assets/images/logo-white.png" title="AgenteDirecto"></a>
+        <a href="index.php"><img class="navbar-brand-logo" src="assets/images/agente-directo.png" title="AgenteDirecto"></a>
         <!--span class="navbar-brand-text hidden-xs"> Remark</span-->
       </div>
       <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-search"
@@ -37,12 +37,12 @@
               <span class="sr-only">Toggle fullscreen</span>
             </a>
           </li>
-          <li class="hidden-float">
+          <!--li class="hidden-float">
             <a class="icon md-search" data-toggle="collapse" href="#" data-target="#site-navbar-search"
             role="button">
               <span class="sr-only">Toggle Search</span>
             </a>
-          </li>
+          </li-->
           
           <li class="dropdown dropdown-fw dropdown-mega">
             <a class="dropdown-toggle" href="adquisiciones.php" aria-expanded="false"
